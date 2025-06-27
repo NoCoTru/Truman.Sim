@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Truman Show Simulator</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Truman's 3D World</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+    #overlay {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-family: sans-serif;
+      background: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <div id="world-map"></div>
-  <div id="threeD-placeholder">3D World View Coming Soon...</div>
-  <div id="info-panel">
-    <div id="story">Loading Truman's world...</div>
-    <div><strong>Location:</strong> <span id="location">Home</span></div>
-    <div><strong>Emotion:</strong> <span id="emotion">Comfortable</span></div>
-    <div class="mood-meter-label">Truman's Emotion Meter</div>
-    <div class="mood-meter">
-      <div id="mood-fill"><div id="mood-label">Comfortable</div></div>
-    </div>
-  </div>
-  <div id="thoughts"><div id="thoughts-content"></div></div>
-  <div id="log" class="log-box"></div>
+  <div id="overlay">Truman's World</div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/examples/js/controls/OrbitControls.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
